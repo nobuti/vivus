@@ -5,7 +5,7 @@
       <% section_slug = section.downcase.gsub(/[^a-z1-9]+/, '-').chomp('-') %>
       <% components = group[1] %>
 
-      <% if components.present? %>
+      <% if section.downcase.gsub(/[^a-z1-9]+/, '-').chomp('-') == params[:section] && components.present? %>
         <% components.uniq{|c| c.name}.each do |component| %>
           <li>
             <%= link_to component.name, vivus_section_path(section_slug, anchor: component.slug) %>
