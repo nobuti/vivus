@@ -10,34 +10,41 @@
   top: 0;
   width: 100%;
   z-index: 1000000;
+  padding: 30px 0 30px 30px;
 
   @include respond-to("small") {
     display: none;
   }
 
-  ul {
-    color: #D5D5D3; 
-  }
-
   li {
     margin-bottom: 5px;
-    list-style: none;
-    margin: 20px 0 10px 20px;
 
-    &.is-active {
-      margin-left: 0;
-      border-left: 5px solid #F3DF6C;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
   a {
+    display: block;
     line-height: 1.45;
+    padding: 10px;
     text-decoration: none;
+    border-radius: 3px;
+
+    &:hover {
+      background-color: rgba(68, 31, 135, 0.3);
+      color: #fff;
+    }
+  }
+
+  .is-active a {
+    background-color: rgba(68, 31, 135, 0.6);
+    color: #fff;
   }
 }
 
 #vivus .vivus-navigation-inner {
-  
+
   ul {
     border-bottom: 1px solid #ddd;
     padding: 20px 0;
@@ -46,5 +53,15 @@
 
   li {
     display: inline-block;
+  }
+
+  a {
+    font-size: 20px;
+    text-decoration: none;
+    padding-right: 20px;
+
+    li:last-child & {
+      padding-right: 0;
+    }
   }
 }
