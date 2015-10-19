@@ -30,7 +30,6 @@ li.vivus-component {
       color: #660000;
       font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
       font-weight: 300;
-      @import 'syntax-highlighting';
     }
   }
 
@@ -62,8 +61,6 @@ li.vivus-component {
       padding: 10px;
       font-size: 14px;
       margin-bottom: 20px;
-
-      @import 'syntax-highlighting';
     }
   }
 
