@@ -1,8 +1,6 @@
 <%= render partial: "sidebar" %>
 
 <div id="vivus-body" class="vivus-body">
-  
-  <%= render partial: "nav" %>
 
   <ul class="vivus-sections">
 
@@ -10,6 +8,9 @@
 
       <li class="vivus-section">
         <h1><%= title %></h1>
+
+        <%= render partial: "nav" %>
+        
         <ul class="vivus-components">
           <%= render partial: "component", collection: components.uniq{|c| c.name} %>
         </ul>
