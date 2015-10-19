@@ -1,0 +1,13 @@
+<nav class="vivus-navigation">
+  <ul>
+    <% @stylesheets.each do |group| %>
+      <% section = group[0] %>
+      <% section_slug = section.downcase.gsub(/[^a-z1-9]+/, '-').chomp('-') %>
+      <% components = group[1] %>
+
+      <li class="<%= "is-active" if section.downcase.gsub(/[^a-z1-9]+/, '-').chomp('-') == params[:section] %>">
+        <%= link_to section, vivus_section_path(section_slug) %>
+      </li>
+    <% end %>
+  </ul>
+</nav>
