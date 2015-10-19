@@ -1,5 +1,5 @@
 <%= render partial: "nav" %>
-<div id="vivus-body">
+<div id="vivus-body" class="vivus-body">
   <ul class="vivus-sections">
 
     <% @stylesheets.select{ |section| section.downcase.gsub(/[^a-z1-9]+/, '-').chomp('-') == params[:section]}.each do |title, components| %>

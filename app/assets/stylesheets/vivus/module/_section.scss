@@ -1,0 +1,14 @@
+#vivus .vivus-body {
+  margin-left: 250px;
+  max-width: 950px;
+  padding: 30px;
+
+  @include respond-to("small") {
+    margin: 0;
+    padding: 20px;
+  }
+}
+
+#vivus .vivus-section {
+  margin-bottom: 40px;
+}
