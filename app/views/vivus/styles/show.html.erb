@@ -5,7 +5,7 @@
     <% @stylesheets.select{ |section| section.downcase.gsub(/[^a-z1-9]+/, '-').chomp('-') == params[:section]}.each do |title, components| %>
 
       <li class="vivus-section">
-        <h1 class="vivus-section-title"><%= title %></h1>
+        <h1><%= title %></h1>
         <ul class="vivus-components">
           <%= render partial: "component", collection: components.uniq{|c| c.name} %>
         </ul>
